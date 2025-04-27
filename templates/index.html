@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summarify - AI Text Summarizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Summarify</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://www.linkedin.com/in/ramisha-iftikhar-a626062b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">LinkedIn</a></li> 
+      <li><a href="https://github.com/dashboard" target="_blank">GitHub</a></li> 
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Summarize Smarter with AI 🚀</h1>
+      <p>Transform long texts into quick summaries effortlessly.</p>
+    </div>
+  </section>
+
+  <section class="main-section">
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+    <div class="buttons">
+      <button onclick="summarizeText()">Summarize</button>
+      <button onclick="readSummary()">Listen</button>
+      <button onclick="downloadSummary()">Download</button>
+      <button onclick="clearText()">Clear</button>
+    </div>
+    <div id="summary" class="summary-box"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Summarify</h2>
+    <p>Summarify uses AI to help you read less and understand more. Perfect for students, professionals, and researchers.
+    Summarify is designed with the aim to streamline reading and comprehension by offering quick and easy text summarization powered by cutting-edge AI technology.
+    Whether you're a student trying to get through research papers or a professional needing quick insights from lengthy reports, Summarify helps you save time.</p>
+  </section>
+
+  <footer>
+    <p>Made by Ramisha Iftikhar</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
